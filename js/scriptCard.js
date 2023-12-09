@@ -42,12 +42,12 @@ const init =async() =>{
     const id = getIdFromUrl();    
     if(id){
         const data = await GetGiftData(id);
-        if(data){
-            console.log(data);
+        if(data){            
             cardImg.src =`img/${data.card}.png`;
-            cardFrom.textContent = data.sender;
-            cardTo.textContent =data.geter;                       
-            cardMessage.textContent =data.message;
+            cardFrom.textContent = data.sender +' '+' telephon: '+ data.phoneSet;
+            cardTo.textContent =data.geter;
+            const formatedData =data.message.replaceAll("\n","<br>");                       
+            cardMessage.innerHTML =formatedData;
         }
     }    
 }

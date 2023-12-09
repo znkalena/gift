@@ -28,9 +28,6 @@ const form = document.querySelector(".form");
 const phoneInputs = form.querySelectorAll(".form__field--phone");
 const formButton = form.querySelector(".form__button");
 const cardInput = document.querySelector(".form__card");
-const cardFrom =document.querySelector(".card__from");
-const cardTo = document.querySelector(".card__to");
-const cardMessage =document.querySelector(".card__message");
 
 const updateCardInput =() => {
     const activeSlide = document.querySelector(".gift__swiper--card .swiper-slide-active");
@@ -79,6 +76,7 @@ try {
         body:JSON.stringify(data),
     });
     const result =await response.json();
+    console.log(result);
     if(response.ok){
         prompt('Postcard saved successfully',`${location.origin}/card.html?id=${result.id}`);        
     }

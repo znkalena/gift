@@ -77,7 +77,7 @@ try {
     });
     const result =await response.json();    
     if(response.ok){
-        prompt('Postcard saved successfully',`${location.origin}/card.html?id=${result.id}`);        
+        prompt('Postcard saved successfully','скопируйте эту ссылку и отправьте получателю',`${location.origin}/card.html?id=${result.id}`);        
     }
     else{
         alert(`There is a mistake sending to server: ${result.error}`)

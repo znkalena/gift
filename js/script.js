@@ -40,7 +40,7 @@ swiperMain.on("slideChangeTransitionEnd",updateCardInput)
 for (let i = 0;i < phoneInputs.length;i++){
     const element = phoneInputs[i];
     const maskOptions = {
-        mask: '+{000}(00)000-00-00'
+        mask: '{+}000(00)000-00-00'
     };
     IMask(element, maskOptions);
 };

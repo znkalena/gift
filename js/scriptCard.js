@@ -43,7 +43,9 @@ const init =async() =>{
     if(id){
         const data = await GetGiftData(id);
         if(data){
-            cardImg.src ='/img/card1.png';
+            console.log(data);
+            const newCard = data.card;
+            cardImg.src =`/img/${newCard}.jpg`;
             console.log(cardImg.src)            
             cardFrom.textContent = data.sender +' '+' phone: '+ data.phoneSet;
             cardTo.textContent =data.geter;

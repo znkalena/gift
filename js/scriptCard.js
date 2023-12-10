@@ -43,7 +43,7 @@ const init =async() =>{
     if(id){
         const data = await GetGiftData(id);
         if(data){
-            cardImg.src =`img/${data.card}.png`;            
+            cardImg.src =`./img/${data.card}.png`;            
             cardFrom.textContent = data.sender +' '+' phone: '+ data.phoneSet;
             cardTo.textContent =data.geter;
             const formatedData =data.message.replaceAll("\n","<br>");                       

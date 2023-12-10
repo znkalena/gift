@@ -75,8 +75,7 @@ try {
         },
         body:JSON.stringify(data),
     });
-    const result =await response.json();
-    console.log(result);
+    const result =await response.json();    
     if(response.ok){
         prompt('Postcard saved successfully',`${location.origin}/card.html?id=${result.id}`);        
     }

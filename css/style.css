@@ -200,12 +200,14 @@ body{
 }
 .congratulation__card {
     margin:  0 auto;
+    height: max-content;
 }
 .card {
     position: relative;
     max-width: 580px;
     height: 375px;
     perspective: 1000px;
+    min-height: max-content;
 }
 
 .card__inner {
@@ -228,6 +230,7 @@ body{
     backface-visibility: hidden;
     transform: rotateY(180deg);
     overflow: hidden;
+    height: max-content;
 }
 .card:hover .card__inner{
     transform: rotateY(180deg);
@@ -243,8 +246,7 @@ body{
     margin-right: 16px;
 }
 .card__message {
-    font-size: 20px;
-    height: max-content;
+    font-size: 20px;    
 }
 @media (max-width: 1140px) {
     .header {

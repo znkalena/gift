@@ -244,6 +244,7 @@ body{
 }
 .card__message {
     font-size: 20px;
+    height: max-content;
 }
 @media (max-width: 1140px) {
     .header {
